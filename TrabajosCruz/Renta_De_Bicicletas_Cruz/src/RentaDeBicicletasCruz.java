@@ -4,19 +4,13 @@ public class RentaDeBicicletasCruz {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("--- Sistema de Renta de Bicicletas - Cruz ---");
+        System.out.println("--- Renta de Bicicletas - Cruz ---");
         System.out.println("1. Bicicleta Urbana ($40 por hora)");
         System.out.println("2. Bicicleta de Montaña ($60 por hora)");
         System.out.println("3. Bicicleta Eléctrica ($90 por hora)");
 
         System.out.print("Ingrese la opcion de bicicleta que deseas rentar: ");
         int tipoBici = teclado.nextInt();
-
-        System.out.print("Ingrese la cantidad de horas de rentaras: ");
-        int horas = teclado.nextInt();
-
-        System.out.print("¿Tiene membresía? (true=Si / false=No): ");
-        boolean tieneMembresia = teclado.nextBoolean();
 
         double tarifa = 0;
         String nombreBici = "";
@@ -42,7 +36,13 @@ public class RentaDeBicicletasCruz {
         }
 
         if (opcionValida) {
+            System.out.print("Ingrese la cantidad de horas que rentaras: ");
+            int horas = teclado.nextInt();
+
             if (horas > 0) {
+                System.out.print("¿Cuentas con una membresía? (true=Si / false=No): ");
+                boolean tieneMembresia = teclado.nextBoolean();
+
                 double subtotal = tarifa * horas;
                 double descuento = 0;
 

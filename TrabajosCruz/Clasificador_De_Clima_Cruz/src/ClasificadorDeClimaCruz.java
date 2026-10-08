@@ -4,7 +4,7 @@ public class ClasificadorDeClimaCruz {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("--- Sistema de Clasificación de Temperatura - Cruz ---");
+        System.out.println("--- Clasificador de Clima - Cruz ---");
         System.out.print("Ingrese la temperatura en °C: ");
         double temperatura = teclado.nextDouble();
 
